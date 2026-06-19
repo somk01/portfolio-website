@@ -292,3 +292,88 @@ h1, h2, h3, h4, p, a, li, figcaption, .hero-title, .hero-sub,
   .story-hero h1 { font-size: clamp(3rem, 7vw, 4.2rem); }
 }
 
+/* ============================================
+   MOBILE + TABLET FIX — paste at end of file
+   ============================================ */
+
+/* Stop sideways scroll & long words getting cut */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+*, *::before, *::after { box-sizing: border-box; }
+
+h1, h2, h3, h4, p, a, li, figcaption,
+.hero-title, .hero-sub, .section-h,
+.work-card h4, .art-hero h1, .story-hero h1,
+.foot-inner .big, .endcard .a, .next-nav a,
+.tag-cell .t, .tag-cell .l {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  max-width: 100%;
+}
+
+img, video, iframe { max-width: 100%; height: auto; }
+
+/* ---------- NAVIGATION (show on mobile + tablet) ---------- */
+@media (max-width: 1024px) {
+  .nav, header nav, .site-nav, .topbar {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: .75rem 1rem;
+    padding: .9rem 1rem;
+    width: 100%;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  .nav ul, header nav ul, .site-nav ul, .topbar ul {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: .8rem 1.1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: clamp(.85rem, 3.4vw, 1rem);
+  }
+  .nav a, header nav a { white-space: nowrap; }
+}
+
+/* ---------- MOBILE (<= 767px) ---------- */
+@media (max-width: 767px) {
+  body { padding: 0 1rem; }
+
+  .hero-title       { font-size: clamp(2rem, 10.5vw, 3rem) !important; line-height: 1.1; letter-spacing: -.01em; }
+  .hero-sub         { font-size: clamp(1rem, 4.4vw, 1.35rem) !important; line-height: 1.4; }
+  .section-h        { font-size: clamp(1.5rem, 6.8vw, 2.2rem) !important; line-height: 1.15; }
+  .work-card h4     { font-size: clamp(1.15rem, 5.6vw, 1.7rem) !important; }
+  .art-hero h1,
+  .story-hero h1    { font-size: clamp(1.9rem, 9.5vw, 2.9rem) !important; line-height: 1.12; }
+  .foot-inner .big  { font-size: clamp(1.4rem, 6vw, 2rem) !important; }
+  .tag-cell .t      { font-size: clamp(.95rem, 4.2vw, 1.15rem) !important; }
+  .tag-cell .l      { font-size: clamp(.75rem, 3vw, .9rem) !important; }
+
+  .chars { display: block; }
+  .chars li {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .25rem;
+    padding: .6rem 0;
+  }
+
+  .portrait, figure img { max-width: 100%; height: auto; }
+  .grid, .work-grid, .two-col { grid-template-columns: 1fr !important; }
+}
+
+/* ---------- TABLET (768–1024px) ---------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-title    { font-size: clamp(2.6rem, 7vw, 4rem) !important; line-height: 1.1; }
+  .hero-sub      { font-size: clamp(1.2rem, 3vw, 1.6rem) !important; }
+  .art-hero h1,
+  .story-hero h1 { font-size: clamp(2.6rem, 6.8vw, 4rem) !important; }
+  .section-h     { font-size: clamp(1.9rem, 4.5vw, 2.6rem) !important; }
+}
+

@@ -237,3 +237,58 @@ footer.foot{max-width:72rem;margin:0 auto;padding:6rem 1.5rem 4rem}
 .portrait:hover .portrait-frame img {
   transform:scale(1.035);
 }
+/* ---------- Mobile & tablet text-overflow fixes ---------- */
+
+/* 1. Stop the page from scrolling sideways on any device */
+html, body { overflow-x: hidden; max-width: 100%; }
+
+/* 2. Let long words & headings wrap instead of getting cut off */
+h1, h2, h3, h4, p, a, li, figcaption, .hero-title, .hero-sub,
+.section-h, .work-card h4, .art-hero h1, .story-hero h1,
+.foot-inner .big, .endcard .a, .next-nav a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  max-width: 100%;
+}
+
+/* 3. Scale down oversized serif headings on small screens */
+@media (max-width: 767px) {
+  .container, .container-sm, .container-md,
+  .art-header, .art-hero, .art-body,
+  .story-hero, .ep-index, .episodes,
+  footer.foot, .next-nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  h1.hero-title       { font-size: clamp(2rem, 11vw, 3rem); letter-spacing: -.01em; }
+  .hero-sub           { font-size: clamp(1.05rem, 4.6vw, 1.4rem); }
+  h2.section-h        { font-size: clamp(1.6rem, 7vw, 2.25rem); }
+  .work-card h4       { font-size: clamp(1.25rem, 6vw, 1.75rem); }
+  .art-hero h1,
+  .story-hero h1      { font-size: clamp(2rem, 10vw, 3rem); letter-spacing: -.01em; }
+  .art-hero .tag,
+  .story-sub          { font-size: clamp(1rem, 4.5vw, 1.25rem); }
+  .foot-inner .big    { font-size: clamp(1.3rem, 6vw, 1.75rem); }
+  .endcard .a,
+  .next-nav a         { font-size: clamp(1.3rem, 6vw, 1.75rem); }
+  .persp p            { font-size: clamp(1rem, 4.5vw, 1.2rem); }
+  .tag-cell .t        { font-size: clamp(1rem, 4.5vw, 1.2rem); }
+  .contact-card .val  { font-size: clamp(1rem, 4.5vw, 1.2rem); }
+
+  /* characters list was 1fr 2fr — too tight on phones */
+  .chars li { grid-template-columns: 1fr; gap: .35rem; }
+
+  /* portrait shouldn't push width on small screens */
+  .portrait { max-width: 78vw; }
+}
+
+/* 4. Tablet tweak — article H1 4.5rem was too wide on portrait tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  h1.hero-title  { font-size: clamp(3rem, 7.2vw, 4.2rem); }
+  .art-hero h1,
+  .story-hero h1 { font-size: clamp(3rem, 7vw, 4.2rem); }
+}
+

@@ -357,3 +357,48 @@ img, video, iframe { max-width: 100%; height: auto; }
   .nav-cta-mobile{display:block;margin-top:.5rem;font-weight:500;color:var(--accent)}
   .nav-inner{position:relative}
 }
+
+/* ---------- MOBILE EDGE PADDING FIX ---------- */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Give every main section breathing room from screen edges */
+  main,
+  section,
+  .container,
+  .wrap,
+  .work-section,
+  .about-section,
+  .story-section,
+  .art-section,
+  .hero,
+  footer,
+  header {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box;
+    max-width: 100% !important;
+  }
+
+  /* Make sure text blocks themselves don't blow past the edge */
+  h1, h2, h3, h4, p, li, blockquote {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Cards / list items with their own borders */
+  .card,
+  .work-item,
+  .story-card,
+  .piece,
+  .collection {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+}

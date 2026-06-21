@@ -124,10 +124,19 @@ h2.section-h{font-family:var(--serif);font-size:2.25rem;line-height:1.15;font-we
 /* Perspective */
 .persp{padding:6rem 0}
 @media(min-width:768px){.persp{padding:8rem 0}}
-.persp p{font-family:var(--serif);font-size:1.25rem;line-height:1.55;margin:0 0 1.25rem;color:color-mix(in oklch,var(--fg) 85%,transparent)}
-@media(min-width:768px){.persp p{font-size:1.5rem}}
-.persp .strong{color:var(--fg)}
-.persp .row{display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;color:var(--muted-fg)}
+.persp p{
+    font-family:var(--sans);
+    font-size:1rem;
+    line-height:1.65;
+    margin:0 0 1.25rem;
+    color:color-mix(in oklch,var(--fg) 80%,transparent);
+}
+
+@media(min-width:768px){
+.persp p{
+    font-size:1.125rem;
+}
+}
 
 /* Pills */
 .pills{margin-top:2.5rem;display:flex;flex-wrap:wrap;gap:.5rem}

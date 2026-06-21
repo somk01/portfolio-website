@@ -514,3 +514,30 @@ body {
 .persp p{font-family:var(--serif);font-size:1.25rem;line-height:1.55;margin:0 0 1.25rem;color:color-mix(in oklch,var(--fg) 85%,transparent)}
 @media(min-width:768px){.persp p{font-size:1.5rem}}
 
+/* Perspective — matches .work */
+.persp{padding:6rem 0}
+@media(min-width:768px){.persp{padding:8rem 0}}
+
+.persp .eyebrow{margin-bottom:2rem}
+
+.persp p{
+  font-family:var(--sans);
+  font-size:1.0625rem;
+  line-height:1.7;
+  margin:0 0 1.25rem;
+  color:color-mix(in oklch,var(--fg) 85%,transparent);
+}
+
+/* The opening line "What's the story here?" — serif italic pull quote */
+.persp p:first-of-type{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:2rem;
+  line-height:1.2;
+  color:var(--fg);
+  margin-bottom:2rem;
+}
+@media(min-width:768px){
+  .persp p:first-of-type{font-size:2.75rem}
+}
+

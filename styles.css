@@ -513,5 +513,4 @@ body {
 @media(min-width:768px){.persp{padding:8rem 0}}
 .persp p{font-family:var(--serif);font-size:1.25rem;line-height:1.55;margin:0 0 1.25rem;color:color-mix(in oklch,var(--fg) 85%,transparent)}
 @media(min-width:768px){.persp p{font-size:1.5rem}}
-.persp .strong{color:var(--fg)}
-.persp .row{display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;color:var(--muted-fg)}
+

@@ -634,4 +634,16 @@ body {
     font-size: 1.5rem !important;
   }
 }
+.hero-row2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.left-col,
+.right-col {
+  width: 48%;          /* or use flex: 1 */
+  text-align: left;      /* keeps everything left-aligned */
+}
 
